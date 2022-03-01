@@ -33,14 +33,36 @@ class Team
 
 }
 
+class Member
+{   
+    protected $name;
+    
+    public function __construct($name)
+    {
+        $this->name=$name;
+    }
+
+    public function lastViewed()
+    {
+
+    }
+
+}
+
 
 
 $acme = Team::start('Acme',[
-    'initial bayram',
-    'initial yilmaz'
+   new Member('bayram'),
+   new Member('yilmaz')
 ]);
+
+
+// $acme = Team::start('Acme',[
+//     'initial bayram',
+//     'initial yilmaz'
+// ]);
 
 // $acme->add('bayram');
 // $acme->add('yilmaz');
 
-var_export($acme);
+var_dump($acme);
