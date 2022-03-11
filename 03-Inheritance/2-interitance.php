@@ -13,18 +13,11 @@ class Collection
 
     public function sum($key)
     {
-       return  array_map(function($item) use ($key){
-            return $item->$key;
-        },$this->items);
+
+        return array_sum(array_column($this->items,$key));
 
     }
 
-    public function length1(){
-        // return $this->items;
-        return array_map(function($item){
-                return $item['length'];
-        },$this->items);
-    }
 }  
 
 class VideosCollection extends Collection
