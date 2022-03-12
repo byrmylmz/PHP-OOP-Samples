@@ -5,13 +5,12 @@
 class Collection
 {
     protected array $items;
-
     public function __construct(array $items)
     {
         $this->items=$items;
     }
 
-    public function sum($key)
+            public function sum($key)
     {
 
         return array_sum(array_column($this->items,$key));

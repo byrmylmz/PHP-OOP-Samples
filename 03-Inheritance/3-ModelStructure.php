@@ -5,6 +5,8 @@ class AchivementType
     public function name()
     {
         //achivement type
+
+
     }
 
     public function diffuculty()
