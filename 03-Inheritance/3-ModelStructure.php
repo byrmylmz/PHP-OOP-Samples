@@ -1,6 +1,7 @@
 <?php
 
-class AchivementType
+
+class AchivementType1
 {
     public function name()
     {
@@ -22,7 +23,7 @@ class AchivementType
 }
 
 // is a 
-class FirstThousandPoints extends AchivementType
+class FirstThousandPoints extends AchivementType1
 {
 
 
@@ -40,3 +41,4 @@ class FirstThousandPoints extends AchivementType
         return 'welcome abroad';
     }
 }
+

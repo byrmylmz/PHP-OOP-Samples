@@ -59,6 +59,7 @@ class ReachTop50 extends AchievementType
 {
     public function qualifier($user)
     {
+        return 'qualifer user ';
 
     }
  
@@ -66,4 +67,4 @@ class ReachTop50 extends AchievementType
 
 
 $replace = new ReachTop50();
-echo $replace->qualifier('user');
+echo $replace->name();
