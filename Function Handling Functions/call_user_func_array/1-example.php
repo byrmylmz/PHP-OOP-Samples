@@ -1,6 +1,7 @@
 <?php
 /**
- * I'm gonna use this for if else / switch / match
+ * 
+ * https://www.php.net/manual/en/function.call-user-func-array.php
  */
 class Str
 {
@@ -26,7 +27,7 @@ class Str
 
 		array_unshift($args, $this->s);
 
-		return call_user_func_array($this->functions[$method], $args);
+		//return call_user_func_array($this->functions[$method], $args);
 	}
 }
 
