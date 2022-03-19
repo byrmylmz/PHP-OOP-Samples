@@ -1,1 +1,0 @@
-[](https://www.php.net/manual/en/function.call-user-func-array.php)

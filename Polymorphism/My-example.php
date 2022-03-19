@@ -1,9 +1,19 @@
 <?php
 
+class Result
+{
+	public function result($get){
+		$result= array();
+		array($result,$get);
+		return $result;
+	}
+}
+
 class Apply
 {
 	public static function run($action)
-	{
+	{		
+			
 			echo $action->handle() . '<br>';
 	}
 }
@@ -18,7 +28,8 @@ abstract class Action
 class Move extends Action
 {
 	public function handle()
-	{
+	{	
+		new Result('move');
 		return 'Move!';
 	}
 }
@@ -26,7 +37,9 @@ class Move extends Action
 class Reorder extends Action
 {
 	public function handle()
-	{
+	{	
+		new Result('reaorder');
+
 		return 'Reorder!';
 	}
 }
@@ -35,6 +48,8 @@ class Delete extends Action
 {
 	public function handle()
 	{
+		new Result('delete');
+
 		return 'Delete!';
 	}
 }
@@ -54,6 +69,10 @@ $actionArray= ['Move','Reorder','Delete','Update'];
 foreach($actionArray as $action){
 	 Apply::run(new $action);
 }
+
+print_r($result);
+
+
 // //...
 // $actions = [
 // 	new Move(),

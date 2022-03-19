@@ -10,13 +10,19 @@ class Str
 	private $functions = [
 		'length' => 'strlen',
 		'upper' => 'strtoupper',
-		'lower' => 'strtolower'
+		'lower' => 'strtolower',
+		'test'=>'move'
 		// map more method to functions
 	];
 
 	public function __construct(string $s)
 	{
 		$this->s = $s;
+	}
+
+	public function move()
+	{
+		echo 'move';
 	}
 
 	public function __call($method, $args)
@@ -33,6 +39,7 @@ class Str
 
 $s = new Str('Hello, World!');
 
-echo $s->upper() . '<br>'; // HELLO, WORLD!
-echo $s->lower() . '<br>'; // hello, world!
-echo $s->length() . '<br>'; // 13
+// echo $s->upper() . '<br>'; // HELLO, WORLD!
+// echo $s->lower() . '<br>'; // hello, world!
+// echo $s->length() . '<br>'; // 13
+echo $s->moved();
